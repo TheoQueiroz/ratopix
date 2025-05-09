@@ -1,0 +1,341 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #f0a500;
+    margin-bottom: 30px;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.logo h1 span {
+    color: #f0a500;
+}
+
+.user-balance {
+    background-color: rgba(240, 165, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.user-balance i {
+    color: #f0a500;
+}
+
+/* Main Game Area */
+.game-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.game-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #f0a500;
+    font-size: 1.8rem;
+}
+
+/* Maior ou Menor Game */
+.highlow-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.card {
+    width: 150px;
+    height: 220px;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.current-card {
+    border: 5px solid #f0a500;
+}
+
+.next-card {
+    border: 5px solid #16213e;
+}
+
+.card.revealed {
+    transform: rotateY(0deg);
+}
+
+.card.win {
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.8);
+    border-color: #4caf50;
+}
+
+.card.lose {
+    box-shadow: 0 0 20px rgba(224, 36, 36, 0.8);
+    border-color: #e02424;
+}
+
+.game-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.bet-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bet-controls button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f0a500;
+    color: #16213e;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bet-controls button:hover {
+    background-color: #e09600;
+}
+
+#bet-amount {
+    width: 100px;
+    padding: 10px;
+    border: 2px solid #f0a500;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+}
+
+.action-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    text-align: center;
+}
+
+#start-game {
+    background-color: #f0a500;
+    color: #16213e;
+}
+
+#start-game:hover {
+    background-color: #e09600;
+    transform: translateY(-3px);
+}
+
+#higher-button {
+    background-color: #4caf50;
+    color: white;
+}
+
+#higher-button:hover:not(:disabled) {
+    background-color: #3d9140;
+    transform: translateY(-3px);
+}
+
+#lower-button {
+    background-color: #e53935;
+    color: white;
+}
+
+#lower-button:hover:not(:disabled) {
+    background-color: #c62828;
+    transform: translateY(-3px);
+}
+
+.action-button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+    transform: none;
+    opacity: 0.7;
+}
+
+.multiplier-info {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.highlight {
+    color: #f0a500;
+    font-weight: bold;
+}
+
+/* Game History */
+.game-history {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.game-history h3 {
+    color: #f0a500;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#history-list {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#history-list li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+#history-list li.win {
+    color: #4caf50;
+}
+
+#history-list li.loss {
+    color: #e02401;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Jumpscare */
+.jumpscare {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.jumpscare.active {
+    display: flex;
+    animation: shake 0.5s linear;
+}
+
+.jumpscare-content {
+    text-align: center;
+    max-width: 80%;
+}
+
+.jumpscare img {
+    max-width: 70%;
+    margin-bottom: 20px;
+    border: 5px solid #e02401;
+}
+
+.message {
+    background-color: rgba(224, 36, 1, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.message h2 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.message p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#close-jumpscare {
+    background-color: #fff;
+    color: #e02401;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(-10px, -10px); }
+    20% { transform: translate(10px, 10px); }
+    30% { transform: translate(-10px, 0px); }
+    40% { transform: translate(10px, -10px); }
+    50% { transform: translate(-10px, 10px); }
+    60% { transform: translate(10px, 0px); }
+    70% { transform: translate(-10px, -10px); }
+    80% { transform: translate(10px, 10px); }
+    90% { transform: translate(-10px, 0px); }
+    100% { transform: translate(0, 0); }
+} 

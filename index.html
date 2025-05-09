@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RATO DO PIX - Ganhe Dinheiro Fácil!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1><span>RATO</span>DOPIX</h1>
+            </div>
+            <div class="user-balance">
+                <i class="fas fa-wallet"></i>
+                <span id="balance">R$ 1000,00</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-container">
+                <h2>Maior ou Menor</h2>
+                
+                <div class="highlow-game">
+                    <div class="card current-card">
+                        <span id="current-number">?</span>
+                    </div>
+                    
+                    <div class="game-controls">
+                        <div class="bet-controls">
+                            <button id="decrease-bet">-</button>
+                            <input type="number" id="bet-amount" min="10" max="1000" step="10" value="50">
+                            <button id="increase-bet">+</button>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button id="start-game" class="action-button">INICIAR</button>
+                            <button id="higher-button" class="action-button" disabled>MAIOR</button>
+                            <button id="lower-button" class="action-button" disabled>MENOR</button>
+                        </div>
+                    </div>
+                    
+                    <div class="next-card">
+                        <span id="next-number">?</span>
+                    </div>
+                </div>
+                
+                <div class="multiplier-info">
+                    <p>Ganhe <span class="highlight">2x</span> sua aposta se acertar!</p>
+                </div>
+            </div>
+
+            <div class="game-history">
+                <h3>Últimos Resultados</h3>
+                <ul id="history-list">
+                    <!-- Histórico de apostas será adicionado aqui -->
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>Jogue com responsabilidade! Você deve ser maior de 18 anos.</p>
+        </footer>
+    </div>
+
+    <div id="jumpscare" class="jumpscare">
+        <div class="jumpscare-content">
+            <img src="jumpscare.jpg" alt="Jumpscare">
+            <div class="message">
+                <h2>VACILÃO!</h2>
+                <p id="jumpscare-message">Você foi mordido pelo Rato do Pix e perdeu tudo!</p>
+                <button id="close-jumpscare">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

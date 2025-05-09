@@ -16,7 +16,7 @@ Este projeto é uma página de zueira que simula um site de apostas com um jogo 
 ## Personalização da mensagem
 
 A mensagem atual do jumpscare é:
-"Você foi mordido pelo Ratão do pix e perdeu tudo! Pague 10 reais ao Theophilus Prime para se curar da Leptospirose"
+"Você foi mordido pelo Ratão do pix e perdeu tudo!"
 
 Para modificar esta mensagem, edite a linha correspondente no arquivo `script.js`.
 
